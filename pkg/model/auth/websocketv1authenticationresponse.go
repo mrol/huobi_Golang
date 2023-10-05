@@ -1,6 +1,10 @@
 package auth
 
-import "encoding/json"
+import (
+	jsoniter "github.com/json-iterator/go"
+)
+
+var json = jsoniter.ConfigCompatibleWithStandardLibrary
 
 type WebSocketV1AuthenticationResponse struct {
 	Op        string `json:"op"`

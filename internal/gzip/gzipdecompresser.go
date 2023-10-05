@@ -2,8 +2,9 @@ package gzip
 
 import (
 	"bytes"
-	"compress/gzip"
-	"io/ioutil"
+	"io"
+
+	"github.com/klauspost/compress/gzip"
 )
 
 func GZipDecompress(input []byte) (string, error) {
@@ -14,7 +15,7 @@ func GZipDecompress(input []byte) (string, error) {
 	}
 	defer reader.Close()
 
-	result, readErr := ioutil.ReadAll(reader)
+	result, readErr := io.ReadAll(reader)
 	if readErr != nil {
 		return "", readErr
 	}

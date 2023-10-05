@@ -1,7 +1,5 @@
 package model
 
-import "encoding/json"
-
 type PingV2Message struct {
 	Action string `json:"action"`
 	Data   *struct {

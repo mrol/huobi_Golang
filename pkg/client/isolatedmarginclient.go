@@ -1,13 +1,13 @@
 package client
 
 import (
-	"encoding/json"
 	"errors"
-	"github.com/huobirdcenter/huobi_golang/internal"
-	"github.com/huobirdcenter/huobi_golang/internal/requestbuilder"
-	"github.com/huobirdcenter/huobi_golang/pkg/model"
-	"github.com/huobirdcenter/huobi_golang/pkg/model/margin"
 	"strconv"
+
+	"github.com/mrol/huobi_golang/internal"
+	"github.com/mrol/huobi_golang/internal/requestbuilder"
+	"github.com/mrol/huobi_golang/pkg/model"
+	"github.com/mrol/huobi_golang/pkg/model/margin"
 )
 
 // Responsible to operate isolated margin

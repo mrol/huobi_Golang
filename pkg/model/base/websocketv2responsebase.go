@@ -1,6 +1,10 @@
 package base
 
-import "encoding/json"
+import (
+	jsoniter "github.com/json-iterator/go"
+)
+
+var json = jsoniter.ConfigCompatibleWithStandardLibrary
 
 type WebSocketV2ResponseBase struct {
 	Action  string `json:"action"`

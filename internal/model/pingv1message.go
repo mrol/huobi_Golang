@@ -1,7 +1,5 @@
 package model
 
-import "encoding/json"
-
 type PingV1Message struct {
 	Op        string `json:"op"`
 	Timestamp int64  `json:"ts"`

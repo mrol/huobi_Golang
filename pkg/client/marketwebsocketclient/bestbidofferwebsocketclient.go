@@ -1,12 +1,16 @@
 package marketwebsocketclient
 
 import (
-	"encoding/json"
 	"fmt"
-	"github.com/huobirdcenter/huobi_golang/logging/applogger"
-	"github.com/huobirdcenter/huobi_golang/pkg/client/websocketclientbase"
-	"github.com/huobirdcenter/huobi_golang/pkg/model/market"
+
+	jsoniter "github.com/json-iterator/go"
+
+	"github.com/mrol/huobi_golang/logging/applogger"
+	"github.com/mrol/huobi_golang/pkg/client/websocketclientbase"
+	"github.com/mrol/huobi_golang/pkg/model/market"
 )
+
+var json = jsoniter.ConfigCompatibleWithStandardLibrary
 
 // Responsible to handle BBO data from WebSocket
 type BestBidOfferWebSocketClient struct {

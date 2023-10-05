@@ -1,14 +1,18 @@
 package client
 
 import (
-	"encoding/json"
 	"errors"
-	"github.com/huobirdcenter/huobi_golang/internal"
-	"github.com/huobirdcenter/huobi_golang/internal/requestbuilder"
-	"github.com/huobirdcenter/huobi_golang/pkg/model"
-	"github.com/huobirdcenter/huobi_golang/pkg/model/account"
 	"strconv"
+
+	jsoniter "github.com/json-iterator/go"
+
+	"github.com/mrol/huobi_golang/internal"
+	"github.com/mrol/huobi_golang/internal/requestbuilder"
+	"github.com/mrol/huobi_golang/pkg/model"
+	"github.com/mrol/huobi_golang/pkg/model/account"
 )
+
+var json = jsoniter.ConfigCompatibleWithStandardLibrary
 
 // Responsible to operate account
 type AccountClient struct {
@@ -220,7 +224,6 @@ func (p *AccountClient) FuturesTransfer(request account.FuturesTransferRequest) 
 	}
 	return result.Data, nil
 }
-
 
 // Returns the point balance of specified user's account
 func (p *AccountClient) GetPointBalance(subUid string) (*account.GetPointBalanceResponse, error) {
